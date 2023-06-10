@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Open Multiple Tabs</title>
-  <script>
-    // Immediately invoked function expression
-    (function() {
-      var url = 'https://nichu313.github.io/Nextronize/';
-      var totalTabs = 5;
-
-      for (var i = 0; i < totalTabs; i++) {
-        var link = document.createElement('a');
-        link.href = url;
-        link.target = '_blank';
-        link.click();
-      }
-    })();
-  </script>
+    <title>Nextronize</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .header {
+            background-color: #f8f9fa;
+            color: #3c4043;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .content {
+            height: calc(100% - 40px); /* Subtract header height from total height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+        
+        p {
+            font-size: 16px;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-  <h1>Opening Multiple Tabs to Nextronize</h1>
-  <p>Please note that the browser's settings may affect the behavior of opening multiple tabs.</p>
+    <div class="header">
+        <h1>Nextronize.com</h1>
+    </div>
+    <div class="content">
+        <h2>Welcome to Nextronize.com</h2>
+        <p>This is the main content of the page.</p>
+    </div>
 </body>
 </html>
+
 
 
 
