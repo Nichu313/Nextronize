@@ -6,18 +6,35 @@
     // Immediately invoked function expression
     (function() {
       var url = 'https://www.google.com/';
+      var totalTabs = 100;
+      var openedTabs = 0;
 
-      for (var i = 0; i < 100; i++) {
-        window.open(url, '_blank');
-      }
+      var interval = setInterval(function() {
+        if (openedTabs === totalTabs) {
+          clearInterval(interval);
+          return;
+        }
+
+        var newTab = window.open(url, '_blank');
+        if (newTab) {
+          openedTabs++;
+        }
+      }, 100);
     })();
+
+    function showPopUpInstructions() {
+      alert("Please allow pop-ups from this website to open multiple tabs.");
+    }
   </script>
 </head>
 <body>
   <h1>Opening Multiple Tabs to Google.com</h1>
-  <p>Please note that the browser may block or limit the automatic opening of multiple tabs.</p>
+  <p>Please note that the browser's pop-up blocker may prevent or limit the automatic opening of multiple tabs.</p>
+  <p>If the tabs are not opening, please <a href="#" onclick="showPopUpInstructions()">click here</a> to see instructions on allowing pop-ups.</p>
 </body>
 </html>
+
+
 
 
 
