@@ -1,19 +1,35 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <title>Change Domain Example</title>
   <script>
     window.addEventListener('load', function() {
-      // Change the domain name to nextronize.com
-      window.location.hostname = 'nextronize.com';
+      // Counter
+      var counter = 5;
+
+      // Update counter every second
+      var interval = setInterval(function() {
+        counter--;
+
+        // Display counter in HTML
+        document.getElementById('counter').textContent = counter;
+
+        // When counter reaches 0, change domain name
+        if (counter === 0) {
+          clearInterval(interval);
+          window.location.hostname = 'nextronize.com';
+        }
+      }, 1000);
     });
   </script>
 </head>
 <body>
   <h1>Page Content</h1>
+  <p>Changing domain to <span id="newDomain">nextronize.com</span> in <span id="counter">5</span> seconds.</p>
   <!-- Add your content here -->
 </body>
 </html>
+
 
 
 
