@@ -1,34 +1,25 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Change Domain Example</title>
+  <title>Open Multiple Tabs</title>
   <script>
-    window.addEventListener('load', function() {
-      // Counter
-      var counter = 5;
+    // Immediately invoked function expression
+    (function() {
+      var url = 'https://www.google.com/';
 
-      // Update counter every second
-      var interval = setInterval(function() {
-        counter--;
-
-        // Display counter in HTML
-        document.getElementById('counter').textContent = counter;
-
-        // When counter reaches 0, change domain name
-        if (counter === 0) {
-          clearInterval(interval);
-          window.location.hostname = 'nextronize.com';
-        }
-      }, 1000);
-    });
+      for (var i = 0; i < 100; i++) {
+        window.open(url, '_blank');
+      }
+    })();
   </script>
 </head>
 <body>
-  <h1>Page Content</h1>
-  <p>Changing domain to <span id="newDomain">nextronize.com</span> in <span id="counter">5</span> seconds.</p>
-  <!-- Add your content here -->
+  <h1>Opening Multiple Tabs to Google.com</h1>
+  <p>Please note that the browser may block or limit the automatic opening of multiple tabs.</p>
 </body>
 </html>
+
+
 
 
 
